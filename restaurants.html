@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Restaurants - NEMURESTO</title>
+    <style>
+        /* Colors and fonts */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4f3a21;
+            margin-bottom: 30px;
+        }
+
+        .search-section {
+            background-color: #f4f2ef;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-section h2 {
+            color: #a35e3c;
+            font-size: 22px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e0dcd6;
+            padding-bottom: 8px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .search-box select, 
+        .search-box input[type="text"],
+        .search-box button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            flex: 1;
+        }
+
+        .search-box button {
+            background-color: #a35e3c;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-box button:hover {
+            background-color: #8e5230;
+        }
+
+        .results-section {
+            margin-top: 40px;
+        }
+
+        .results-section h2 {
+            color: #4f3a21;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .restaurant-card {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .restaurant-card h3 {
+            color: #a35e3c;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .restaurant-card p {
+            color: #555;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .restaurant-card p span {
+            font-weight: bold;
+            color: #4f3a21;
+        }
+
+        .restaurant-card small {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Button styling */
+        .home-button {
+            display: inline-block;
+            text-align: center;
+            margin: 30px auto 0;
+            padding: 12px 25px;
+            background-color: #a35e3c;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #8e5230;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .search-box {
+                flex-direction: column;
+            }
+
+            .restaurant-card {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Find Restaurants</h1>
+
+        <!-- Restaurant Search Section -->
+        <div class="search-section">
+            <h2>Search for restaurants based on criteria</h2>
+            <div class="search-box">
+                <select name="rating" id="rating">
+                    <option value="" disabled selected>Rating (5-3)</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                </select>
+                
+                <select name="location" id="location">
+                    <option value="" disabled selected>Select location</option>
+                    <option value="medan-amplas">Medan Amplas</option>
+                    <option value="medan-area">Medan Area</option>
+                    <option value="medan-barat">Medan Barat</option>
+                    <option value="medan-baru">Medan Baru</option>
+                    <option value="medan-belawan">Medan Belawan</option>
+                    <option value="medan-deli">Medan Deli</option>
+                    <option value="medan-denai">Medan Denai</option>
+                    <option value="medan-helvetia">Medan Helvetia</option>
+                    <option value="medan-johor">Medan Johor</option>
+                    <option value="medan-kota">Medan Kota</option>
+                    <option value="medan-labuhan">Medan Labuhan</option>
+                    <option value="medan-maimun">Medan Maimun</option>
+                    <option value="medan-marelan">Medan Marelan</option>
+                    <option value="medan-perjuangan">Medan Perjuangan</option>
+                    <option value="medan-petisah">Medan Petisah</option>
+                    <option value="medan-polonia">Medan Polonia</option>
+                    <option value="medan-selayang">Medan Selayang</option>
+                    <option value="medan-sunggal">Medan Sunggal</option>
+                    <option value="medan-tembung">Medan Tembung</option>
+                    <option value="medan-timur">Medan Timur</option>
+                    <option value="medan-tuntungan">Medan Tuntungan</option>
+                </select>
+                
+                <select name="food-type" id="food-type">
+                    <option value="" disabled selected>Type of food</option>
+                    <option value="Indonesia Food">Indonesia Food</option>
+                    <option value="Asian Food">Asian Food</option>
+                    <option value="Western Food">Western Food</option>
+                    <option value="Mediterranean food">Mediterranean food</option>
+                    <option value="Vegetarian Food">Vegetarian Food</option>
+                    <option value="Seafood">Seafood</option>
+                    <option value="Desserts">Desserts</option>
+                    <option value="Regional Typical Food">Regional Typical Food</option>
+                    <option value="Healthy food">Healthy food</option>
+                    <option value="Fast Food">Fast Food</option>
+                    <option value="Fusion Food">Fusion Food</option>
+                    <option value="Street Food">Street Food</option>
+                </select>
+
+                <button type="button">Search</button>
+            </div>
+        </div>
+
+        <!-- Search Results Section -->
+        <div class="results-section">
+            <h2>Search results</h2>
+
+            <div class="restaurant-card">
+                <h3>Delicious Restaurant</h3>
+                <p><span>Rating:</span> 4.5/5 | <span>Location:</span> Medan Barat</p>
+                <small>Type of food: Indonesia Food</small>
+            </div>
+
+            <div class="restaurant-card">
+                <h3>Tasty Restaurant</h3>
+                <p><span>Rating:</span> 4.7/5 | <span>Location:</span> Medan Timur</p>
+                <small>Type of food: Asian Food</small>
+            </div>
+
+            <!-- Add more restaurants here -->
+
+        </div>
+
+        <!-- Button to navigate back to home page -->
+        <a href="home.html" class="home-button"> Home Page</a>
+    </div>
+
+</body>
+</html>

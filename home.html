@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEMURESTO - Culinary Experience in Medan!">
+    <title>Home | NEMURESTO - Culinary Experience in Medan!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #9e2d2d;
+        }
+
+        /* Header */
+        header {
+            background: rgb(82, 60, 26);
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Slideshow Section */
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .slideshow-container .prev,
+        .slideshow-container .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px;
+            background: rgb(255, 245, 245);
+            color: #491e10;
+            cursor: pointer;
+            font-size: 1.5rem;
+            border-radius: 50%;
+        }
+
+        .slideshow-container .prev {
+            left: 10px;
+        }
+
+        .slideshow-container .next {
+            right: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background: #3b1515;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #540d0d;
+        }
+
+        /* Home Content Section */
+        .home-content {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .home-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .home-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cta-buttons a {
+            padding: 15px 30px;
+            background-color: #873428;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #433922;
+        }
+
+        /* Catalog Section */
+        .catalog-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .catalog-item {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .catalog-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .catalog-item i {
+            font-size: 3rem;
+            color: #842c27;
+            margin-bottom: 20px;
+        }
+
+        .catalog-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .catalog-item p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color:#842c27;
+        }
+
+        .catalog-item a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #842c27;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .catalog-item a:hover {
+            background-color: #8b765a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #8b765a;
+            color: #6b1b1b;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to NEMURESTO</h1>
+        <p>Your Culinary Adventure Starts Here</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="News.html">News</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+       <!-- Slideshow -->
+       <div class="slideshow-container">
+        <div class="slides">
+            <img src="resto1.jpg" alt="Restoran 1">
+        </div>
+        <div class="slides">
+            <img src="resto2.jpg" alt="Restoran 2">
+        </div>
+        <div class="slides">
+            <img src="resto3.jpg" alt="Restoran 3">
+        </div>
+        <div class="slides">
+            <img src="resto4.jpg" alt="Restoran 4">
+        </div>
+        <div class="slides">
+            <img src="resto5.jpg" alt="Restoran 5">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Home Content -->
+    <section class="home-content" id="home">
+        <h2>Explore the Best Culinary Spots in Medan</h2>
+        <p>We bring you a handpicked selection of the top restaurants in Medan. From traditional dishes to modern
+            cuisine, our curated list ensures that every meal is an experience to remember. Explore, dine, and
+            enjoy the flavors that make Medan a culinary paradise.</p>
+        <div class="cta-buttons">
+            <a href="restaurants.html">View Restaurants</a>
+            <a href="News.html">Check News</a>
+        </div>
+    </section>
+
+<!-- Catalog Section -->
+<section class="catalog-container">
+    <div class="catalog-item">
+        <i class="fas fa-utensils"></i>
+        <h3>Explore for the best places to eat in Medan</h3>
+        <p>Explore a variety of dining options, from street food to fine dining, and discover the best culinary experiences in Medan.</p>
+        <a href="restaurants.html">Explore Now</a> <!-- Link updated -->
+    </div>
+
+    <div class="catalog-item">
+        <i class="fas fa-comments"></i>
+        <h3>See the latest reviews</h3>
+        <p>Read the latest reviews from our community and find out what locals and travelers recommend for a perfect meal in Medan.</p>
+        <a href="restaurants.html">Read Reviews</a>
+    </div>
+
+    <div class="catalog-item">
+        <i class="fas fa-heart"></i>
+        <h3>Best place to eat for date</h3>
+        <p>Looking for a romantic spot? We've curated the best restaurants in Medan perfect for a date night.</p>
+        <a href="#romantic">View Spots</a>
+    </div>
+</section>
+
+<style>
+/* CSS Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+/* Styling for feature categories */
+.feature-category {
+    margin: 40px auto;
+    width: 90%;
+}
+
+.feature-category h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #842c27;
+}
+
+.card-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    gap: 20px; /* Space between cards */
+    padding: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #842c27 transparent;
+}
+
+.card {
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+    scroll-snap-align: start;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h4 {
+    font-size: 18px;
+    margin: 0;
+    color: #842c27;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #777;
+}
+
+.rating, .love {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating span, .card a {
+    font-size: 14px;
+    color: #ff9529;
+}
+
+.card a {
+    color: #842c27;
+    text-decoration: none;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.love {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.love.active {
+    color: #842c27;
+}
+
+/* Stylish Scrollbar */
+.card-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.card-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background-color: #842c27;
+    border-radius: 10px;
+    border: 3px solid transparent;
+}
+
+/* Footer style (optional, if needed) */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #842c27;
+    color: white;
+    margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<!-- Sections for each feature -->
+<section id="features">
+<h2>Restaurant Features</h2>
+
+<!-- Trending Section -->
+<div class="feature-category" id="trending">
+    <h3>Trending Restaurants</h3>
+    <div class="card-container">
+        <!-- Trending Cards 1-10 -->
+        <div class="card">
+            <img src="TS1.jpg" alt="Trending Spot 1">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/82Tx2RU" target="_blank">Tip Top Restaurant</a></h4>
+                <p>(061) 4514442</p>
+                <div class="rating">
+                    <span>⭐ 4.5/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="TS2.png" alt="Trending Spot 2">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/bPXXMiP" target="_blank">Penthouse on 19th</a></h4>
+                <p>0811-6060-0190</p>
+                <div class="rating">
+                    <span>⭐ 4.7/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="TS3.png" alt="Trending Spot 2">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/JgY9Usk" target="_blank">Sari Laut Nelayan</a></h4>
+                <p>(061) 4525537</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="TS4.png" alt="Trending Spot 2">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/yBNheEN" target="_blank">BISTRONOMIX</a></h4>
+                <p>(061) 4561662
+                </p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="TS5.png" alt="Trending Spot 2">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/iKFdK4V" target="_blank">Ji Long Chinese Restaurant 吉龍餐馆/a></h4>
+                <p>0812-3934-4698</p>
+                <div class="rating">
+                    <span>⭐ 4.5/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="TS6.png" alt="Trending Spot 2">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/5WzYNuQ" target="_blank">LKKR (Lekker Urban Food House Putri Hijau)</a></h4>
+                <p>0811-6597-799</p>
+                <div class="rating">
+                    <span>⭐ 4.5/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="TS7.png" alt="Trending Spot 2">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/ALmnno1" target="_blank">The Edge Restaurant</a></h4>
+                <p>0811-6531-599</p>
+                <div class="rating">
+                    <span>⭐ 4.5/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="TS8.png" alt="Trending Spot 2">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/k77pPYe" target="_blank">De Kapal Cafe And Resto</a></h4>
+                <p>0811-6350-812</p>
+                <div class="rating">
+                    <span>⭐ 4.4/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="TS9.png" alt="Trending Spot 2">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/1xPCjiQ" target="_blank">Wajir Seafood</a></h4>
+                <p>(061) 4573785</p>
+                <div class="rating">
+                    <span>⭐ 4.5/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="TS10.jpg" alt="Trending Spot 2">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/R2kQS4D" target="_blank">Hi Korea Yangnyeom chicken</a></h4>
+                <p>0811-6571-226</p>
+                <div class="rating">
+                    <span>⭐ 4.9/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+    </div>
+</div>
+
+<!-- Romantic Spot Section -->
+<div class="feature-category" id="romantic">
+    <h3>Romantic Spots</h3>
+    <div class="card-container">
+        <!-- Romantic Cards 1-10 -->
+        <div class="card">
+            <img src="RC1.png" alt="Prime Steakhouse">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/p5HFZxA" target="_blank">Prime Steakhouse</a></h4>
+                <p>Perfect place for romantic dinners.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="RC2.png" alt="Le Chateau">
+            <div class="card-content">
+                <h4><a href="https://www.google.com/search?sca_esv=492959cb0fa9f70d&cs=0&output=search&kgmid=%2Fg%2F11smdpj9qy&q=Le%20Chateau&shndl=30&shem=uaasic&source=sh%2Fx%2Floc%2Funi%2Fm1%2F1&kgs=b6bf36b735ed483b" target="_blank">Le Chateau</a></h4>
+                <p>Elegant dining experience for couples.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="RC3.png" alt="The Upper Level">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/JZa2rH1" target="_blank">The Upper Level</a></h4>
+                <p>Exclusive rooftop dining with stunning views.</p>
+                <div class="rating">
+                    <span>⭐ 4.7/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="RC4.png" alt="Oui Dining">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/461Jb6u" target="_blank">Oui Dining</a></h4>
+                <p>Charming venue with exquisite cuisine.</p>
+                <div class="rating">
+                    <span>⭐ 4.7/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="RC5.png" alt="Enchanté Dining">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/jaxxfbm" target="_blank">Enchanté Dining</a></h4>
+                <p>Delightful atmosphere perfect for a date night.</p>
+                <div class="rating">
+                    <span>⭐ 4.9/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="RC6.png" alt="Petite Terrasse">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/w7LG2un" target="_blank">Petite Terrasse</a></h4>
+                <p>Cozy terrace dining for intimate gatherings.</p>
+                <div class="rating">
+                    <span>⭐ 4.9/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="RC7.png" alt="Marine Resto & Bar">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/Wfdntzr" target="_blank">Marine Resto & Bar</a></h4>
+                <p>Luxurious dining by the water's edge.</p>
+                <div class="rating">
+                    <span>⭐ 5.0/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="RC8.png" alt="O'Flahertys">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/QVtQ3xB" target="_blank">O'Flahertys</a></h4>
+                <p>Irish pub with a romantic ambiance.</p>
+                <div class="rating">
+                    <span>⭐ 4.4/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="RC9.png" alt="SOHO Capital Medan">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/jRoniuk" target="_blank">SOHO Capital Medan</a></h4>
+                <p>Modern dining with a sleek design.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="RC10.png" alt="Higher Steps Dining">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/snnKZDZ" target="_blank">Higher Steps Dining</a></h4>
+                <p>Perfect spot for a romantic evening.</p>
+                <div class="rating">
+                    <span>⭐ 4.3/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Hidden Gems Section -->
+<div class="feature-category" id="Hidden">
+    <h3>Hidden Gems</h3>
+    <div class="card-container">
+        <!-- Hidden Gems Cards 1-10 -->
+        <div class="card">
+            <img src="HG1.jpg" alt="I pick pasta">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/yraqc7k" target="_blank">I pick pasta</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 4.7/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="HG2.png" alt="Nusa Dua Coffee & Resto">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/s1JJ2dZ" target="_blank">Nusa Dua Coffee & Resto</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 3.4/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="HG3.png" alt="Koffkin Coffee">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/8DX3W5D" target="_blank">Koffkin Coffee</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="HG4.png" alt="Earth Bake">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/khdB9eq" target="_blank">Earth Bake</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 4.7/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="HG5.png" alt="Dapuraja Cafe & Roastery">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/zR2ybMV" target="_blank">Dapuraja Cafe & Roastery</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="HG6.png" alt="Lastcall Club">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/bv2xf9D" target="_blank">Lastcall Club</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 4.3/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="HG7.png" alt="Wooden Space">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/CZuWXhd" target="_blank">Wooden Space</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 4.5/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="HG8.png" alt="Hidden Place">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/gRVNQMT" target="_blank">Hidden Place</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="HG9.png" alt="Kito Art Cafe & Resto">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/xtv6fqc" target="_blank">Kito Art Cafe & Resto</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 4.2/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="HG10.png" alt="Alligator Roastery">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/hrb5tDJ" target="_blank">Alligator Roastery</a></h4>
+                <p>Hidden gem with a cozy atmosphere.</p>
+                <div class="rating">
+                    <span>⭐ 4.7/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+    </div>
+</div>
+
+
+<!-- All You Can Eat Section -->
+<div class="feature-category" id="all-you-can-eat">
+    <h3>All You Can Eat</h3>
+    <div class="card-container">
+        <!-- All You Can Eat Cards 1-10 -->
+        <div class="card">
+            <img src="ALL1.png" alt="Shaburi & Kintan Buffet">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/BK1zU3b" target="_blank">Shaburi & Kintan Buffet</a></h4>
+                <p>Japanese buffet with a variety of dishes.</p>
+                <div class="rating">
+                    <span>⭐ 4.8/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="ALL2.png" alt="Hanamasa Medan">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/tHH1P2J" target="_blank">Hanamasa Medan</a></h4>
+                <p>Authentic Japanese BBQ and sukiyaki.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="ALL3.png" alt="Meatsuka">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/Ri1e594" target="_blank">Meatsuka</a></h4>
+                <p>Popular spot for meat lovers.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="ALL4.png" alt="Shaburi Kintan Centre Point">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/cwcMLAt" target="_blank">Shaburi Kintan Centre Point</a></h4>
+                <p>High-quality buffet experience.</p>
+                <div class="rating">
+                    <span>⭐ 5.0/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="ALL5.png" alt="KAGAYAKU GRILL & SHABURI">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/hmPfGuZ" target="_blank">KAGAYAKU GRILL & SHABURI</a></h4>
+                <p>Japanese AYCE with grilled options.</p>
+                <div class="rating">
+                    <span>⭐ 4.7/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="ALL6.png" alt="Banthai Suki & BBQ">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/vfZS4qY" target="_blank">Banthai Suki & BBQ</a></h4>
+                <p>Thai-style BBQ and sukiyaki.</p>
+                <div class="rating">
+                    <span>⭐ 4.2/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="ALL7.png" alt="Steak 21">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/LwvqMy8" target="_blank">Steak 21</a></h4>
+                <p>Popular for steak lovers.</p>
+                <div class="rating">
+                    <span>⭐ 4.2/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="ALL8.png" alt="Sushi Tei Sun Plaza">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/mbh6LcN" target="_blank">Sushi Tei Sun Plaza</a></h4>
+                <p>Japanese buffet with fresh sushi.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="ALL9.png" alt="GAPYEONG Korean BBQ HM Joni">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/1ANZ4cX" target="_blank">GAPYEONG Korean BBQ HM Joni</a></h4>
+                <p>Korean BBQ with authentic flavors.</p>
+                <div class="rating">
+                    <span>⭐ 4.5/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+        <div class="card">
+            <img src="ALL10.png" alt="MASAKMASAK Steamboat Yakiniku">
+            <div class="card-content">
+                <h4><a href="https://g.co/kgs/MDnCccW" target="_blank">MASAKMASAK Steamboat Yakiniku</a></h4>
+                <p>Steamboat and yakiniku in one place.</p>
+                <div class="rating">
+                    <span>⭐ 4.6/5</span>
+                </div>
+            </div>
+            <div class="love" onclick="toggleLove(this)">&#10084;</div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Rooftop Section -->
+        <div class="feature-category" id="rooftop">
+            <h3>Rooftop Restaurants</h3>
+            <div class="card-container">
+                <!-- Rooftop Cards 1-10 -->
+                <div class="card">
+                    <img src="ROOF1.png" alt="Tropical Rooftop">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/4nSBwZM" target="_blank">Tropical Rooftop</a></h4>
+                        <p>Scenic spot with city views.</p>
+                        <div class="rating">
+                            <span>⭐ 4.3/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="ROOF2.png" alt="SKY the Oasis Rooftop Bar & Lounge">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/9QAwHDs" target="_blank">SKY the Oasis Rooftop Bar & Lounge</a></h4>
+                        <p>Relaxing lounge with panoramic views.</p>
+                        <div class="rating">
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="ROOF3.png" alt="Level 02 Rooftop">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/6ovoKyW" target="_blank">Level 02 Rooftop</a></h4>
+                        <p>Trendy spot for rooftop dining.</p>
+                        <div class="rating">
+                            <span>⭐ 4.3/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="ROOF4.png" alt="The Edge Restaurant">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/Hyzw3py" target="_blank">The Edge Restaurant</a></h4>
+                        <p>Elegant setting with skyline views.</p>
+                        <div class="rating">
+                            <span>⭐ 4.5/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="ROOF5.png" alt="Sirocco Rooftop Bistro">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/mcsSZ5q" target="_blank">Sirocco Rooftop Bistro</a></h4>
+                        <p>Bistro with open-air ambiance.</p>
+                        <div class="rating">
+                            <span>⭐ 4.3/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="ROOF6.png" alt="LIMA Rooftop Bar">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/odjSDxG" target="_blank">LIMA Rooftop Bar</a></h4>
+                        <p>Casual bar with a rooftop vibe.</p>
+                        <div class="rating">
+                            <span>⭐ 4.0/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="ROOF7.png" alt="Cello Skypool & Lounge">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/k8hCFNZ" target="_blank">Cello Skypool & Lounge</a></h4>
+                        <p>Poolside lounge with city views.</p>
+                        <div class="rating">
+                            <span>⭐ 4.1/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="ROOF8.png" alt="Kito Art Cafe & Resto">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/LtsnQuK" target="_blank">Kito Art Cafe & Resto</a></h4>
+                        <p>Artistic rooftop cafe with great ambiance.</p>
+                        <div class="rating">
+                            <span>⭐ 4.2/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="ROOF9.png" alt="L7 Rooftop">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/4L4Bcz6" target="_blank">L7 Rooftop</a></h4>
+                        <p>Modern rooftop with 5-star views.</p>
+                        <div class="rating">
+                            <span>⭐ 5.0/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="ROOF10.png" alt="Top Roof Cafe">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/uTwLgmx" target="_blank">Top Roof Cafe</a></h4>
+                        <p>Stylish cafe with panoramic views.</p>
+                        <div class="rating">
+                            <span>⭐ 5.0/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Outdoor Section -->
+        <div class="feature-category" id="outdoor">
+            <h3>Outdoor Restaurants</h3>
+            <div class="card-container">
+                <!-- Outdoor Cards 1-10 -->
+                <div class="card">
+                    <img src="OUT1.png" alt="Dovers Cafe & Lounge">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/KJCc97S" target="_blank">Dovers Cafe & Lounge</a></h4>
+                        <p>Charming cafe with a cozy outdoor lounge.</p>
+                        <div class="rating">
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="OUT2.png" alt="Tengah People & Place">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/1VLvrZv" target="_blank">Tengah People & Place</a></h4>
+                        <p>Vibrant outdoor dining atmosphere.</p>
+                        <div class="rating">
+                            <span>⭐ 4.5/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="OUT3.png" alt="The Cups & Co">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/wqZmtQd" target="_blank">The Cups & Co</a></h4>
+                        <p>Casual dining with a lovely outdoor space.</p>
+                        <div class="rating">
+                            <span>⭐ 4.4/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="OUT4.png" alt="DIMIGO">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/jFUvooB" target="_blank">DIMIGO</a></h4>
+                        <p>Stylish venue with outdoor seating.</p>
+                        <div class="rating">
+                            <span>⭐ 4.5/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="OUT5.png" alt="Unboss Coffee">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/B6sejh3" target="_blank">Unboss Coffee</a></h4>
+                        <p>Relaxed coffee spot with outdoor charm.</p>
+                        <div class="rating">
+                            <span>⭐ 4.5/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="OUT6.png" alt="Junction Café">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/rYfmcnc" target="_blank">Junction Café</a></h4>
+                        <p>Modern café with a great outdoor vibe.</p>
+                        <div class="rating">
+                            <span>⭐ 4.6/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="OUT7.png" alt="L'Tropico by Haban">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/3yKQfVu" target="_blank">L'Tropico by Haban</a></h4>
+                        <p>Relaxed dining with tropical flair.</p>
+                        <div class="rating">
+                            <span>⭐ 4.1/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="OUT8.png" alt="Ludoo Eatery">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/7Kmm1yY" target="_blank">Ludoo Eatery</a></h4>
+                        <p>Cozy eatery with a lovely outdoor setting.</p>
+                        <div class="rating">
+                            <span>⭐ 4.0/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="OUT9.png" alt="Jinjit Coffee and Bistro">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/kK86V3R" target="_blank">Jinjit Coffee and Bistro</a></h4>
+                        <p>Charming bistro with outdoor seating.</p>
+                        <div class="rating">
+                            <span>⭐ 3.9/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+                <div class="card">
+                    <img src="OUT10.png" alt="Nusantara Healing & Chill">
+                    <div class="card-content">
+                        <h4><a href="https://g.co/kgs/gRn36gq" target="_blank">Nusantara Healing & Chill</a></h4>
+                        <p>Outdoor space perfect for relaxation.</p>
+                        <div class="rating">
+                            <span>⭐ 3.6/5</span>
+                        </div>
+                    </div>
+                    <div class="love" onclick="toggleLove(this)">&#10084;</div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+<!-- Chat With Us Button -->
+<div class="chat-btn" onclick="openChat()">Chat with us!</div>
+
+<!-- Chat Popup -->
+<div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+        <h3>Chat Support</h3>
+        <span onclick="closeChat()" class="close-btn">&times;</span>
+    </div>
+    <input type="text" placeholder="Type your message here...">
+    <button class="send-btn">Send</button>
+</div>
+
+<style>
+/* Chat Button */
+.chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #651e15;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.chat-btn:hover {
+    background-color: #7f564a;
+}
+
+/* Chat Popup */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #fff;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color: #511010;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.chat-popup input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.send-btn {
+    background-color: #4a1713;
+    color: white;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.send-btn:hover {
+    background-color: #7f564a;
+}
+</style>
+
+<!-- Script for Chat -->
+<script>
+function openChat() {
+    document.getElementById('chatPopup').style.display = 'block';
+}
+
+function closeChat() {
+    document.getElementById('chatPopup').style.display = 'none';
+}
+</script>
+
+    <style>
+        /* Footer Styles */
+        footer {
+            background-color: #842c27; /* Background warna gelap */
+            color: white;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            text-align: left; /* Semua teks rata kiri */
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column h4 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .line {
+            border-top: 1px solid #842c27;
+            margin: 20px 0;
+        }
+
+        .footer-bottom {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* Horizontal styling for footer links */
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start; /* Align items to the left */
+        gap: 30px; /* Add spacing between items */
+    }
+
+    .footer-links ul li {
+        margin-right: 0; /* No additional margin since we're using gap */
+    }
+
+    .footer-links ul li a {
+        color: #fffcfb;
+        text-decoration: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-links ul li a i {
+        margin-right: 8px; /* Space between icon and text */
+        font-size: 18px;
+    }
+
+    .footer-links ul li a:hover {
+        text-decoration: underline;
+        color: #842c27;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+
+<footer>
+    <div class="footer-container">
+        <!-- Title -->
+        <div class="footer-column">
+            <h4>NEMURESTO® RESTAURANT MEDAN</h4>
+        </div>
+
+        <!-- Garis Horizontal -->
+        <div class="line"></div>
+
+        <!-- Links Section -->
+        <div class="footer-column">
+            <ul>
+                <li><a href="#home">Overview</a></li>
+                <li><a href="restaurants.html">Flavour Medan</a></li>
+                <li><a href="#trending">Trending Restaurants</a></li>
+                <li><a href="#romantic">Romantic Spots</a></li>
+                <li><a href="#Hidden">Hidden Gems</a></li>
+                <li><a href="#all-you-can-eat">All You Can Eat</a></li>
+                <li><a href="#rooftop">Rooftop Restaurants</a></li>
+                <li><a href="#outdoor">Outdoor Restaurants</a></li>
+            </ul>
+        </div>
+
+        <!-- Garis Horizontal -->
+        <div class="line"></div>
+
+   <!-- Find Us Section -->
+<div class="footer-column">
+    <p style="color: white;">Find us at: 
+        <a href="http://blablablablabla.do" style="color: white;">blablablablabla.do</a>
+    </p>
+</div>
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <!-- Links Section -->
+            <div class="footer-links">
+                <p>© 2024 Nemuresto LLC Semua hak dilindungi undang-undang.</p>
+                <ul>
+                    <li><a href="Terms.html">Terms of use</a></li>
+                    <li><a href="How_it_works.html">How it works</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="restaurants.html">Rating</a></li>
+                    <li><a href="javascript:void(0);" id="help-link" onclick="openChat()">Help</a></li>
+                </ul>
+            </div>
+<!-- FontAwesome Icon Library for icons -->
+<script src="home.js" ></script>
+
+</body>
+</html>

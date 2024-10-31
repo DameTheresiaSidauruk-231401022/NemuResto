@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Food & Restaurants</title>
+    
+    <!-- Link ke Font Awesome untuk ikon interaksi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4f3a21;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .news-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .news-card {
+            background-color: white;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-content {
+            padding: 15px;
+            flex: 1;
+        }
+        .news-content h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 10px;
+        }
+        .news-content p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .news-content a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4f3a21;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .news-content a:hover {
+            background-color: #a35e3c;
+        }
+        .news-interaction {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+        .news-interaction div {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .news-interaction div i {
+            margin-right: 5px;
+            color: #888;
+        }
+        .news-interaction div:hover i {
+            color: #a35e3c;
+        }
+
+        /* Popup styles */
+        .comment-popup,
+        .share-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 400px;
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        .comment-popup h3,
+        .share-popup h3 {
+            margin-top: 0;
+        }
+
+        .comment-popup ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .comment-popup li {
+            margin-bottom: 10px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .close-popup {
+            cursor: pointer;
+            background: red;
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            float: right;
+        }
+
+        .share-options {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        .share-options a {
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .news-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Back to Home Button Styling */
+        .back-home-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .back-home {
+            display: inline-block;
+            background-color: #8a4b45;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-home:hover {
+            background-color: #6b3f38;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    News - Food & Restaurants
+</header>
+
+<div class="news-container">
+    <!-- Card 1 -->
+    <div class="news-card">
+        <img src="N1.jpg" alt="Restoran Fusion Unik">
+        <div class="news-content">
+            <h2><a href="https://food.detik.com/info-kuliner/d-7610559/food-vlogger-datang-bikin-video-pemilik-resto-ini-geram-dan-mengusirnya">Food Vlogger Datang Bikin Video, Pemilik Resto Ini Geram dan Mengusirnya! </a></h2>
+            <p>Pengalaman kurang menyenangkan dialami seorang food vlogger. Ia yang datang ke restoran sambil merekam video berakhir diusir karena pemilik restoran tidak suka.</p>
+        </div>
+        <div class="news-interaction">
+            <div class="like-section" data-likecount="12"><i class="fas fa-thumbs-up"></i> <span>12</span></div>
+            <div class="comment-section" data-commentcount="5"><i class="fas fa-comment"></i> <span>5</span></div>
+            <div class="share-section"><i class="fas fa-share"></i> Share</div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="news-card">
+        <img src="N2.jpg" alt="Restoran Seafood Terbaik">
+        <div class="news-content">
+            <h2><a href="https://food.detik.com/info-kuliner/d-7577280/sedang-diet-tapi-kelaparan-pembeli-ini-titip-pesan-kocak-ke-restoran">Sedang Diet Tapi Kelaparan, Pembeli Ini Titip Pesan Kocak ke Restoran</a></h2>
+            <p>Sedang dalam proses diet tapi kelaparan, pembeli ini akhirnya titipkan pesan lucu yang membuat pemilik restoran tertawa.</p>
+        </div>
+        <div class="news-interaction">
+            <div class="like-section" data-likecount="20"><i class="fas fa-thumbs-up"></i> <span>20</span></div>
+            <div class="comment-section" data-commentcount="10"><i class="fas fa-comment"></i> <span>10</span></div>
+            <div class="share-section"><i class="fas fa-share"></i> Share</div>
+        </div>
+    </div>
+
+     <!-- Card 3 -->
+     <div class="news-card">
+        <img src="N3.jpg" alt="Restoran Seafood Terbaik">
+        <div class="news-content">
+            <h2><a href="https://food.detik.com/info-kuliner/d-7587064/duh-5-bisnis-kuliner-bangkrut-gegara-ain-hingga-tak-mampu-bayar-listrik">Duh! 5 Bisnis Kuliner Bangkrut Gegara Ain hingga Tak Mampu Bayar Listrik</a></h2>
+            <p>Walaupun sudah berjuang keras tetapi sebagian orang masih belum bertemu kesuksesannya. Sampai-sampai beberapa bisnis kuliner ini bangkrut dengan alasan sepele.
+            </p>
+        </div>
+        <div class="news-interaction">
+            <div class="like-section" data-likecount="20"><i class="fas fa-thumbs-up"></i> <span>20</span></div>
+            <div class="comment-section" data-commentcount="10"><i class="fas fa-comment"></i> <span>10</span></div>
+            <div class="share-section"><i class="fas fa-share"></i> Share</div>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="news-card">
+        <img src="N4.jpeg" alt="Restoran Seafood Terbaik">
+        <div class="news-content">
+            <h2><a href="https://www.cnbcindonesia.com/entrepreneur/20240503185121-25-535656/buka-restoran-di-belanda-pembantu-asal-jawa-mendadak-kaya-raya">
+                Buka Restoran di Belanda, Pembantu Asal Jawa Mendadak Kaya Raya </a></h2>
+            <p>Kehidupan seperti roda berputar. Ada kalanya di atas, ada kalanya juga berada di bawah. 
+                Begitulah yang dialami Oesin, jongos atau pembantu asal Jawa yang menghabiskan sisa hidupnya di Belanda.</p>
+        </div>
+        <div class="news-interaction">
+            <div class="like-section" data-likecount="20"><i class="fas fa-thumbs-up"></i> <span>20</span></div>
+            <div class="comment-section" data-commentcount="10"><i class="fas fa-comment"></i> <span>10</span></div>
+            <div class="share-section"><i class="fas fa-share"></i> Share</div>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="news-card">
+        <img src="N5.jpeg" alt="Restoran Seafood Terbaik">
+        <div class="news-content">
+            <h2><a href="https://www.kompas.com/food/read/2024/10/23/092700175/pengalaman-makan-di-restoran-baru-di-jakarta-pusat-bernuansa-eropa">
+                Pengalaman Makan di Restoran Baru di Jakarta Pusat, Bernuansa Eropa</a></h2>
+            <p>Kehidupan seperti roda berputar. Ada kalanya di atas, ada kalanya juga berada di bawah. 
+                Begitulah yang dialami Oesin, jongos atau pembantu asal Jawa yang menghabiskan sisa hidupnya di Belanda.</p>
+        </div>
+        <div class="news-interaction">
+            <div class="like-section" data-likecount="20"><i class="fas fa-thumbs-up"></i> <span>20</span></div>
+            <div class="comment-section" data-commentcount="10"><i class="fas fa-comment"></i> <span>10</span></div>
+            <div class="share-section"><i class="fas fa-share"></i> Share</div>
+        </div>
+    </div>
+
+    <!-- Additional News Cards as needed -->
+</div>
+
+<!-- Centered Back to Home Button -->
+<div class="back-home-container">
+    <a href="home.html" class="back-home">Back to Home</a>
+</div>
+
+</body>
+</html>
